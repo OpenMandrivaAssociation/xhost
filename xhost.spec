@@ -1,6 +1,6 @@
 Name: xhost
-Version: 1.0.1
-Release: %mkrel 2
+Version: 1.0.2
+Release: %mkrel 1
 Summary: Server access control program for X
 Group: Development/X11
 Source: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
@@ -22,11 +22,10 @@ implement the user-based mechanism or use the hooks in the protocol for passing
 other authentication data to the server.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 
 %build
-%configure2_5x	--x-includes=%{_includedir}\
-		--x-libraries=%{_libdir}
+%configure
 
 %make
 
@@ -40,6 +39,6 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %{_bindir}/xhost
-%{_mandir}/man1/xhost.1x.bz2
+%{_mandir}/man1/xhost.1%{_extension}
 
 
