@@ -5,6 +5,7 @@ Summary: Server access control program for X
 Group: Development/X11
 Source: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
 License: MIT
+BuildRoot: %{_tmppath}/%{name}-root
 
 BuildRequires: libx11-devel >= 1.0.0
 BuildRequires: libxau-devel >= 1.0.0
