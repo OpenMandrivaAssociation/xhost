@@ -1,16 +1,16 @@
 Name: xhost
 Version: 1.0.2
-Release: %mkrel 4
+Release: %mkrel 5
 Summary: Server access control program for X
 Group: Development/X11
 Source: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
 License: MIT
 BuildRoot: %{_tmppath}/%{name}-root
 
-BuildRequires: libx11-devel >= 1.0.0
-BuildRequires: libxau-devel >= 1.0.0
-BuildRequires: libxmu-devel >= 1.0.0
-BuildRequires: x11-util-macros >= 1.0.1
+BuildRequires: x11-util-macros	>= 1.1.5
+BuildRequires: libx11-devel	>= 1.1.3
+BuildRequires: libxau-devel	>= 1.0.3
+BuildRequires: libxmu-devel	>= 1.0.3
 Conflicts: setup < 2.7.10
 
 %description
