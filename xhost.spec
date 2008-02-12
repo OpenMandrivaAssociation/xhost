@@ -7,10 +7,10 @@ Source: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.t
 License: MIT
 BuildRoot: %{_tmppath}/%{name}-root
 
-BuildRequires: x11-util-macros	>= 1.1.5
-BuildRequires: libx11-devel	>= 1.1.3
-BuildRequires: libxau-devel	>= 1.0.3
-BuildRequires: libxmu-devel	>= 1.0.3
+BuildRequires: libx11-devel >= 1.0.0
+BuildRequires: libxau-devel >= 1.0.0
+BuildRequires: libxmu-devel >= 1.0.0
+BuildRequires: x11-util-macros >= 1.0.1
 Conflicts: setup < 2.7.10
 
 %description
