@@ -1,6 +1,6 @@
 Name: xhost
 Version: 1.0.2
-Release: %mkrel 6
+Release: %mkrel 7
 Summary: Server access control program for X
 Group: Development/X11
 Source: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
@@ -33,32 +33,6 @@ other authentication data to the server.
 rm -rf %{buildroot}
 %makeinstall_std
 
-install -d -m 755 %{buildroot}%{_sysconfdir}/profile.d
-cat > %{buildroot}%{_sysconfdir}/profile.d/20xhost.csh <<EOF
-# Export Xauthority for users not for root.
-
-if (\$?DISPLAY) then
-    if (! \$?SSH_TTY) then
-        if ( \`id -u\` >= 14 ) then
-            if (! \$?XAUTHORITY) then
-                setenv XAUTHORITY "\$HOME/.Xauthority"
-            endif
-        endif
-    endif
-endif
-EOF
-
-cat > %{buildroot}%{_sysconfdir}/profile.d/20xhost.sh <<EOF
-# Export Xauthority for users not for root.
-
-if [ ! -z "\$DISPLAY" -a -z "\$SSH_TTY" ];then
-    if [ "\`id -u\`" -gt 14 ];then
-        if [ -z "\$XAUTHORITY" ];then
-            export XAUTHORITY="\$HOME/.Xauthority"
-        fi
-    fi
-fi
-EOF
 %clean
 rm -rf %{buildroot}
 
@@ -66,4 +40,3 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_bindir}/xhost
 %{_mandir}/man1/xhost.1%{_extension}
-%{_sysconfdir}/profile.d/*
