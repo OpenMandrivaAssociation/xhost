@@ -1,6 +1,6 @@
 Name: xhost
 Version: 1.0.2
-Release: %mkrel 7
+Release: %mkrel 8
 Summary: Server access control program for X
 Group: Development/X11
 Source: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
