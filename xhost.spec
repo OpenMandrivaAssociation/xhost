@@ -1,5 +1,5 @@
 Name: xhost
-Version: 1.0.3
+Version: 1.0.4
 Release: %mkrel 1
 Summary: Server access control program for X
 Group: Development/X11
