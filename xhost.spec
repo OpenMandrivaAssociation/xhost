@@ -35,3 +35,59 @@ other authentication data to the server.
 %files
 %{_bindir}/xhost
 %{_mandir}/man1/xhost.1%{_extension}
+
+
+%changelog
+* Mon Mar 26 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.0.5-1
++ Revision: 786805
+- version update 1.0.5
+
+* Sat May 07 2011 Oden Eriksson <oeriksson@mandriva.com> 1.0.4-2
++ Revision: 671321
+- mass rebuild
+
+* Tue Nov 02 2010 Thierry Vignaud <tv@mandriva.org> 1.0.4-1mdv2011.0
++ Revision: 591824
+- new release
+
+* Wed Nov 11 2009 Paulo Ricardo Zanoni <pzanoni@mandriva.com> 1.0.3-1mdv2010.1
++ Revision: 464708
+- New version: 1.0.3
+
+* Sat Mar 07 2009 Antoine Ginies <aginies@mandriva.com> 1.0.2-8mdv2009.1
++ Revision: 351078
+- rebuild
+
+* Mon Aug 04 2008 Ander Conselvan de Oliveira <ander@mandriva.com> 1.0.2-7mdv2009.0
++ Revision: 263480
+- Drop xhost.sh. It sets XAUTHORITY to the same value used when it is not set.
+
+* Wed Jun 18 2008 Thierry Vignaud <tv@mandriva.org> 1.0.2-6mdv2009.0
++ Revision: 226044
+- rebuild
+
+  + Paulo Andrade <pcpa@mandriva.com.br>
+    - Revert to use upstream tarball, build requires and remove non mandatory local patches.
+
+* Fri Jan 18 2008 Paulo Andrade <pcpa@mandriva.com.br> 1.0.2-5mdv2008.1
++ Revision: 154732
+- Updated BuildRequires and resubmit package.
+
+* Tue Jan 15 2008 Christiaan Welvaart <spturtle@mandriva.org> 1.0.2-4mdv2008.1
++ Revision: 153294
+- protect the $ (in xhost profile scriptlets)
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Wed Dec 12 2007 Guillaume Rousse <guillomovitch@mandriva.org> 1.0.2-3mdv2008.1
++ Revision: 119060
+- ship xhost profile scriptlet
+
+* Tue Jul 17 2007 Colin Guthrie <cguthrie@mandriva.org> 1.0.2-1mdv2008.0
++ Revision: 52838
+- New upstream release 1.0.2
+
