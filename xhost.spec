@@ -25,6 +25,7 @@ other authentication data to the server.
 %setup -q
 
 %build
+autoreconf -fi
 %configure2_5x
 %make
 
