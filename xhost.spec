@@ -6,9 +6,9 @@ Group: Development/X11
 Source0: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
 License: MIT
 
-BuildRequires: libx11-devel >= 1.0.0
-BuildRequires: libxau-devel >= 1.0.0
-BuildRequires: libxmu-devel >= 1.0.0
+BuildRequires: pkgconfig(x11) >= 1.0.0
+BuildRequires: pkgconfig(xau) >= 1.0.0
+BuildRequires: pkgconfig(xmu) >= 1.0.0
 BuildRequires: x11-util-macros >= 1.0.1
 Conflicts: setup < 2.7.10
 
