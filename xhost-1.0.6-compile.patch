@@ -1,0 +1,16 @@
+--- xhost-1.0.6/xhost.c.omv~	2014-02-14 07:39:39.728165868 +0100
++++ xhost-1.0.6/xhost.c	2014-02-14 07:41:31.422163047 +0100
+@@ -59,12 +59,8 @@ X Window System is a trademark of The Op
+ #include "config.h"
+ #endif
+ 
+-#ifdef TCPCONN
++/* We need sockets unconditionally because of unconditional use of sethostent */
+ #define NEEDSOCKETS
+-#endif
+-#ifdef UNIXCONN
+-#define NEEDSOCKETS
+-#endif
+ 
+ #include <X11/Xlib.h>
+ #include <X11/Xos.h>

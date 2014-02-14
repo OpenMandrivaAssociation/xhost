@@ -1,9 +1,10 @@
 Name: xhost
 Version: 1.0.6
-Release: 5
+Release: 6
 Summary: Server access control program for X
 Group: Development/X11
 Source0: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
+Patch0: xhost-1.0.6-compile.patch
 License: MIT
 
 BuildRequires: pkgconfig(x11) >= 1.0.0
@@ -23,6 +24,7 @@ other authentication data to the server.
 
 %prep
 %setup -q
+%apply_patches
 
 %build
 autoreconf -fi
