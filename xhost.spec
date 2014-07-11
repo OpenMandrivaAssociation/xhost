@@ -1,6 +1,6 @@
 Name: xhost
 Version: 1.0.6
-Release: 7
+Release: 8
 Summary: Server access control program for X
 Group: Development/X11
 Source0: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
