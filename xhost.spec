@@ -1,17 +1,16 @@
 Name: xhost
-Version: 1.0.8
+Version: 1.0.9
 Release: 1
 Summary: Server access control program for X
 Group: Development/X11
-Source0: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
+Source0: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.xz
 Patch0: xhost-1.0.6-compile.patch
 License: MIT
 
 BuildRequires: pkgconfig(x11) >= 1.0.0
 BuildRequires: pkgconfig(xau) >= 1.0.0
 BuildRequires: pkgconfig(xmu) >= 1.0.0
-BuildRequires: x11-util-macros >= 1.0.1
-Conflicts: setup < 2.7.10
+BuildRequires: pkgconfig(xorg-macros)
 
 %description
 The xhost program is used to add and delete host names or user names to the
@@ -35,4 +34,4 @@ autoreconf -fi
 
 %files
 %{_bindir}/xhost
-%{_mandir}/man1/xhost.1%{_extension}
+%doc %{_mandir}/man1/xhost.1%{_extension}
