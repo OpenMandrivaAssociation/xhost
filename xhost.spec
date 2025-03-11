@@ -11,6 +11,7 @@ BuildRequires: pkgconfig(x11) >= 1.0.0
 BuildRequires: pkgconfig(xau) >= 1.0.0
 BuildRequires: pkgconfig(xmu) >= 1.0.0
 BuildRequires: pkgconfig(xorg-macros)
+BuildRequires: gettext
 
 %description
 The xhost program is used to add and delete host names or user names to the
